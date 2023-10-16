@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyleHeader = styled.header`
-    background: ${props => props.theme.greyer_background};
+    background: ${props => props.theme.grey_background};
     width: 100%;
     height: 200px;
     padding: 12px 12px;
@@ -14,7 +14,7 @@ export const StyleHeader = styled.header`
     position: relative;
 
     .title{
-        background: ${props => props.theme.greyer_background};
+        background: ${props => props.theme.grey_background};
 
         padding-top: 5px;
         padding-bot: 1px;
@@ -25,7 +25,7 @@ export const StyleHeader = styled.header`
 
     .logo {
         padding: 10px 0 10px 0;
-        background: ${props => props.theme.greyer_background};
+        background: ${props => props.theme.grey_background};
     }
 
     .newTaskForm {

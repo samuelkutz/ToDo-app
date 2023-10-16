@@ -27,7 +27,7 @@ export const StyleTasks = styled.main`
   
   
   .subheader span {
-    background: ${props => props.theme.greyer_background};
+    background: ${props => props.theme.grey_background};
     color: #D9D9D9;
     padding: 3px 9px;
     border-radius: 999px;

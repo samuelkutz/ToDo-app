@@ -1,5 +1,6 @@
 import React from "react";
 import * as styles from "./tasks.styles"
+import Task from "../Task/Task";
 
 const Tasks = () => {
     return (
@@ -17,7 +18,7 @@ const Tasks = () => {
             </header>
 
             <div className="list">
-                
+                <Task />
             </div>
         </styles.StyleTasks>
     )
