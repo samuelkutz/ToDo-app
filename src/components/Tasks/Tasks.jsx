@@ -2,7 +2,7 @@ import React from "react";
 import * as styles from "./tasks.styles"
 import Task from "../Task/Task";
 
-const Tasks = ({ tasks, onComplete }) => {
+const Tasks = ({ tasks, onComplete, onDelete }) => {
     const taskQuantity = tasks.length;
     const completedTasks = tasks.filter(task => task.isCompleted).length
     return (
@@ -21,7 +21,7 @@ const Tasks = ({ tasks, onComplete }) => {
 
             <div className="list">
                 {tasks.map( task => {
-                    return <Task key={task.id} task={task} onComplete={onComplete}/>
+                    return <Task key={task.id} task={task} onComplete={onComplete} onDelete={onDelete}/>
                 })}
             </div>
         </styles.StyleTasks>

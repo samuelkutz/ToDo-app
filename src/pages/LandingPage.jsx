@@ -19,14 +19,19 @@ const LandingPage = () => {
   function toggleTaskCompletedbyId(taskID){
     const newTasks = tasks.map(task => {
       if (task.id === taskID) {
-        return {
-          ...task, 
-          ìsCompleted: !task.isCompleted
-        }
+        task.isCompleted = !task.isCompleted
+
+        return task
       }
 
       return task
     })
+
+    setTasks(newTasks)
+  }
+
+  function deleteTaskById(taskID) {
+    const newTasks = tasks.filter(task => task.id != taskID)
 
     setTasks(newTasks)
   }
@@ -36,6 +41,7 @@ const LandingPage = () => {
         <Tasks 
             tasks={tasks}
             onComplete={toggleTaskCompletedbyId}
+            onDelete={deleteTaskById}
         />
     </div>
   )

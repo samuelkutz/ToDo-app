@@ -1,21 +1,21 @@
 import React from "react";
 import * as styles from "./task.styles"
 import { TrashSimple } from "@phosphor-icons/react"
-import { CheckCircle } from "@phosphor-icons/react"
+import { Check } from "@phosphor-icons/react"
 
-const Task = ({ task, onComplete }) => {
+const Task = ({ task, onComplete, onDelete }) => {
     return (
         <styles.StyleTask className="content"> 
             <div className="task">
-                <button className="checkContainer" onClick={() => onComplete(task.id)}>
-                    {task.isCompleted ? <CheckCircle size={25} color="#616161" /> : <CheckCircle size={25} color="#d6d6d6" />}
+                <button className="checkContainer" onClick={() => {onComplete(task.id)}}>
+                    {task.isCompleted ? <div><Check size={64} weight="bold"/></div> : <div/>}
                 </button>
             </div>
 
-            <p>{task.title}</p>
+            <p className={task.isCompleted ? "textCompleted" : ""}>{task.title}</p>
  
             <button className="deleteButton">
-                <TrashSimple size={25} weight="duotone" />
+                <TrashSimple size={25} weight="duotone" onClick={() => onDelete(task.id)}/>
             </button>
        </styles.StyleTask>
     )
