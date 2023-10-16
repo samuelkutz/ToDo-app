@@ -21,7 +21,7 @@ export const StyleTask = styled.main`
   }
 
   p.textCompleted {
-    color: ${props => props.theme.input_background};
+    color: ${props => props.theme.button_background};
     text-decoration: line-through;
   }
 
