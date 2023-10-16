@@ -11,6 +11,7 @@ const Header = ({ onAddTask }) => {
     event.preventDefault()
 
     onAddTask(title)
+    setTitle('')
   }
 
   function onChangeTitle(event) {

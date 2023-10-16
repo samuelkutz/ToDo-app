@@ -16,10 +16,27 @@ const LandingPage = () => {
     ])
   }
 
+  function toggleTaskCompletedbyId(taskID){
+    const newTasks = tasks.map(task => {
+      if (task.id === taskID) {
+        return {
+          ...task, 
+          ìsCompleted: !task.isCompleted
+        }
+      }
+
+      return task
+    })
+
+    setTasks(newTasks)
+  }
   return (
     <div className="container">
         <Header onAddTask={addTask}/>
-        <Tasks tasks={tasks}/>
+        <Tasks 
+            tasks={tasks}
+            onComplete={toggleTaskCompletedbyId}
+        />
     </div>
   )
 }
