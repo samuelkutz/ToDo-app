@@ -9,7 +9,7 @@ const Header = ({ onAddTask }) => {
 
   function handleSubmit(event){
     event.preventDefault()
-    
+
     onAddTask(title)
   }
 
@@ -25,7 +25,7 @@ const Header = ({ onAddTask }) => {
     <form onSubmit={handleSubmit} className="newTaskForm">
       <input placeholder="Add your new task" type="text" value={title} onChange={onChangeTitle}/>
       <button> 
-        <Plus size={25} />  
+        <Plus size={25}/>  
       </button>
     </form>
   </styles.StyleHeader>

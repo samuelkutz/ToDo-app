@@ -19,9 +19,7 @@ const LandingPage = () => {
   return (
     <div className="container">
         <Header onAddTask={addTask}/>
-        <Tasks 
-          tasks={tasks}
-        />
+        <Tasks tasks={tasks}/>
     </div>
   )
 }

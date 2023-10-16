@@ -2,7 +2,7 @@ import React from "react";
 import * as styles from "./task.styles"
 import { TrashSimple } from "@phosphor-icons/react"
 
-const Task = () => {
+const Task = ({ task }) => {
     return (
         <styles.StyleTask className="content"> 
             <div  className="task">
@@ -11,7 +11,7 @@ const Task = () => {
                 </button>
             </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>{task.title}</p>
 
             <button className="deleteButton">
                 <TrashSimple size={25} weight="duotone" />
