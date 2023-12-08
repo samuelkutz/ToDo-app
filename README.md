@@ -33,7 +33,3 @@ To edit a task, click on the task name. A text box will appear where you can ent
 ## Deleting Tasks
 
 To delete a task, click on the trash icon next to the task name.
-
-## License
-
-This project is licensed under the MIT License.
